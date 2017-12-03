@@ -22,8 +22,8 @@ include_once(dirname(__FILE__) . "/app/login.class.php");
 
 // database
 defined('MYSQL_SERVER') or define('MYSQL_SERVER', '114.215.82.75');
-defined('MYSQL_USERNAME') or define('MYSQL_USERNAME', 'root');
-defined('MYSQL_PASSWORD') or define('MYSQL_PASSWORD', 'Ioriesy');
+defined('MYSQL_USERNAME') or define('MYSQL_USERNAME', 'anna');
+defined('MYSQL_PASSWORD') or define('MYSQL_PASSWORD', 'anna');
 defined('MYSQL_DATABASE') or define('MYSQL_DATABASE', 'bitrobot');
 defined('MYSQL_PREFIX') or define('MYSQL_PREFIX', 'bitrobot_');
 
