@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    var edituid = 0;
     var userlist = new Vue({
         el: "#page-wrapper",
         data: {
             users: null,
+            edituid: 0,
             modal: {
                 label: '新建用户',
                 username: '',
@@ -33,17 +33,24 @@ $(document).ready(function() {
                 });
             },
             removeUser: function(event) {
-                var uk = $(event.currentTarget).attr("uk");
-                var uid = this.users[uk].id;
+                // var uk = $(event.currentTarget).attr("uk");
+                // var uid = this.users[uk].id;
+                var uid = this.edituid;
                 console.debug(uid);
+                if (uid == 0) {
+                    return;
+                }
                 __request("api.v1.user.removeuser", {uid: uid}, function(res) {
                     if (res.data.code == 0) {
                         reload_data();
                     }
                 });
+                $("#newUserModal").modal('hide');
             },
             editUser: function(event) {
                 var uk = $(event.currentTarget).attr("uk");
+                console.debug(uk);
+                console.debug(this.users);
                 var uid = this.users[uk].id;
                 this.modal.label = "修改用户";
                 this.modal.username = this.users[uk].username;
@@ -52,7 +59,7 @@ $(document).ready(function() {
                 this.modal.telephone = this.users[uk].telephone;
                 this.modal.email = this.users[uk].email;
                 this.modal.comments = this.users[uk].comments;
-                edituid = uid;
+                this.edituid = uid;
                 $("#newUserModal").modal();
             }
         }
@@ -72,7 +79,7 @@ $(document).ready(function() {
             return;
         }
 
-        if (edituid == 0) {
+        if (userlist.edituid == 0) {
             __request("api.v1.user.adduser", {
                 username: username,
                 password: password,
@@ -86,7 +93,7 @@ $(document).ready(function() {
             });
         } else {
             __request("api.v1.user.edituser", {
-                uid: edituid,
+                uid: userlist.edituid,
                 username: username,
                 password: password,
                 nickname: userlist.modal.nickname,
@@ -112,7 +119,7 @@ $(document).ready(function() {
     });
 
     $("#newUser").click(function() {
-        edituid = 0;
+        userlist.edituid = 0;
         userlist.modal.label = "新建用户";
         userlist.modal.username = "";
         userlist.modal.password = "";

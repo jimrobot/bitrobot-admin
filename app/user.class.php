@@ -3,7 +3,7 @@ include_once(dirname(__FILE__) . "/../config.php");
 
 class User {
     private $mSummary = null;
-    private $mGroups = null;
+    // private $mGroups = null;
 
     public function __construct($summary = array()) {
         if (empty($summary)) {
@@ -87,19 +87,19 @@ class User {
         return $gids;
     }
 
-    public function groups() {
-        if ($this->mGroups === null) {
-            $this->mGroups = array();
-            $groups = self::cachedAllGroups();
-            $gids = $this->gids();
-            foreach ($gids as $gid) {
-                if (isset($groups[$gid])) {
-                    $this->mGroups []= $groups[$gid];
-                }
-            }
-        }
-        return $this->mGroups;
-    }
+    // public function groups() {
+    //     if ($this->mGroups === null) {
+    //         $this->mGroups = array();
+    //         $groups = self::cachedAllGroups();
+    //         $gids = $this->gids();
+    //         foreach ($gids as $gid) {
+    //             if (isset($groups[$gid])) {
+    //                 $this->mGroups []= $groups[$gid];
+    //             }
+    //         }
+    //     }
+    //     return $this->mGroups;
+    // }
 
     public function hasPerm($pkey) {
         $groups = $this->groups();
@@ -111,23 +111,23 @@ class User {
         return false;
     }
 
-    public function joinGroup($gid) {
-        $gids = $this->gids();
-        if (!in_array($gid, $gids)) {
-            $gids []= $gid;
-        }
-        $this->mSummary["groups"] = implode(",", $gids);
-    }
+    // public function joinGroup($gid) {
+    //     $gids = $this->gids();
+    //     if (!in_array($gid, $gids)) {
+    //         $gids []= $gid;
+    //     }
+    //     $this->mSummary["groups"] = implode(",", $gids);
+    // }
 
-    public function leaveGroup($gid) {
-        $gids = $this->gids();
-        foreach ($gids as $k =>  $g) {
-            if ($g == $gid) {
-                unset($gids[$k]);
-            }
-        }
-        $this->mSummary["groups"] = implode(",", $gids);
-    }
+    // public function leaveGroup($gid) {
+    //     $gids = $this->gids();
+    //     foreach ($gids as $k =>  $g) {
+    //         if ($g == $gid) {
+    //             unset($gids[$k]);
+    //         }
+    //     }
+    //     $this->mSummary["groups"] = implode(",", $gids);
+    // }
 
     public function save() {
         $id = $this->id();
@@ -142,37 +142,37 @@ class User {
         return $id;
     }
 
-    private static function cachedAllGroups() {
-        $cache = cache::instance();
-        $groups = $cache->load("class.user.allgroups", null);
-        if ($groups === null) {
-            $groups = Group::all();
-            $cache->save("class.user.allgroups", $groups);
-        }
-        return $groups;
-    }
+    // private static function cachedAllGroups() {
+    //     $cache = cache::instance();
+    //     $groups = $cache->load("class.user.allgroups", null);
+    //     if ($groups === null) {
+    //         $groups = Group::all();
+    //         $cache->save("class.user.allgroups", $groups);
+    //     }
+    //     return $groups;
+    // }
 
     public function packInfo($pack_all_groups = true) {
-        $groupInfo = array();
-        if ($pack_all_groups) {
-            $groups = self::cachedAllGroups();
-            $gids = $this->gids();
-            foreach ($groups as $gid => $group) {
-                $groupInfo[$gid] = $group->packInfo(false);
-                $groupInfo[$gid]["join"] = 0;
-            }
-            foreach ($gids as $gid) {
-                if (isset($groups[$gid])) {
-                    $groupInfo[$gid]["join"] = 1;
-                }
-            }
-        } else {
-            $groups = $this->groups();
-            $groupInfo = array();
-            foreach ($groups as $group) {
-                $groupInfo []= $group->packInfo(false);
-            }
-        }
+        // $groupInfo = array();
+        // if ($pack_all_groups) {
+        //     $groups = self::cachedAllGroups();
+        //     $gids = $this->gids();
+        //     foreach ($groups as $gid => $group) {
+        //         $groupInfo[$gid] = $group->packInfo(false);
+        //         $groupInfo[$gid]["join"] = 0;
+        //     }
+        //     foreach ($gids as $gid) {
+        //         if (isset($groups[$gid])) {
+        //             $groupInfo[$gid]["join"] = 1;
+        //         }
+        //     }
+        // } else {
+        //     $groups = $this->groups();
+        //     $groupInfo = array();
+        //     foreach ($groups as $group) {
+        //         $groupInfo []= $group->packInfo(false);
+        //     }
+        // }
 
         return array(
             "id" => $this->id(),
@@ -182,7 +182,7 @@ class User {
             "telephone" => $this->telephone(), 
             "email" => $this->email(), 
             "comments" => $this->comments(), 
-            "groups" => $groupInfo
+            // "groups" => $groupInfo
         );
     }
 

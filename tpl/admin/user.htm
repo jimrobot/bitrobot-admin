@@ -1,25 +1,28 @@
 <link rel="stylesheet" href="[:app]/css/checkbox.css">
 <div id="page-content">
     <div class="clear">
-        <div class="user border radius m-t-15 col-md-3" v-for="(user, uk) in users" v-if="user.id != 1" v-cloak>
-            <div class="modal-header">
-                <button type="button" class="close" v-bind:uk="uk" v-on:click="removeUser"><i class="fa fa-fw fa-times"></i></button>
-                <button type="button" class="close" v-bind:uk="uk" v-on:click="editUser"><i class="fa fa-fw fa-edit"></i></button>
-                <h5 class="modal-title text-center"><strong>{{user.nickname}}</strong></h5>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <p class="modal-title">帐号：{{user.username}}</p>
-                    <p class="modal-title">密码：{{user.password}}</p>
-                    <p class="modal-title">电话：{{user.telephone}}</p>
-                    <p class="modal-title">邮箱：{{user.email}}</p>
-                    <p class="modal-title">备注：{{user.comments}}</p>
-                </div>
-                <div class="" v-for="(group, gk) in user.groups">
-                    <div class="checkbox-slider--b-flat checkbox-slider-md" v-bind:uk="uk" v-bind:gk="gk" v-on:change="update"><label><input type="checkbox" v-model="group.join" /><span>{{group.name}}</span></label></div>
-                </div>
-            </div>
-        </div>
+        <table width="100%" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>帐号</th>
+                    <th>密码</th>
+                    <th>姓名</th>
+                    <th>电话</th>
+                    <th>邮箱</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(user, uk) in users" v-cloak v-on:click="editUser" v-bind:uk="uk">
+                    <td>{{user.username}}</td>
+                    <td>{{user.password}}</td>
+                    <td>{{user.nickname}}</td>
+                    <td>{{user.telephone}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.comments}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div>
         <button class="btn btn-primary col-md-12 col-xs-12 col-sm-12 m-t-15" id="newUser">新增</button>
@@ -68,6 +71,7 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 <button type="button" class="btn btn-primary" id="addNewUser">确认</button>
+                <button type="button" class="btn btn-danger pull-left" v-on:click="removeUser" v-if="edituid != 0">删除</button>
             </div>
         </div>
     </div>
