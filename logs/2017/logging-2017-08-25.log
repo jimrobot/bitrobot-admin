@@ -1,0 +1,835 @@
+<2017-08-25 04:15:34:958>     24547    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 04:15:34:959>     24547    [106.38.72.115]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 04:16:28:072>     24638    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 04:16:28:072>     24638    [106.38.72.115]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 04:16:28:436>     24376    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-08-25 04:16:28:984>     23998    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-08-25 04:39:23:172>     24428    [139.162.114.70]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 04:39:23:173>     24428    [139.162.114.70]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 12:30:09:532>     25831    [71.6.202.204]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 12:30:09:534>     25831    [71.6.202.204]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 14:30:02:989>     24375    [189.123.45.51]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 14:30:02:990>     24375    [189.123.45.51]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 15:45:22:640>     25824    [71.6.202.196]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 15:45:22:641>     25824    [71.6.202.196]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 17:59:56:978>     26472    [27.223.99.130]    (NOT LOGIN)    D/Portal      access: invoicing:::order_controller::newproduct_action
+<2017-08-25 17:59:56:980>     26472    [27.223.99.130]    (NOT LOGIN)    D/Login       refer from /?order/newproduct
+<2017-08-25 17:59:56:991>     26472    [27.223.99.130]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-08-25 18:00:00:068>     26472    [27.223.99.130]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::login_controller::salt_action
+<2017-08-25 18:00:00:089>     26472    [27.223.99.130]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::login_controller::login_action
+<2017-08-25 18:00:00:091>     26472    [27.223.99.130]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:00:00:092>     26472    [27.223.99.130]    (NOT LOGIN)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:00:00:092>     26472    [27.223.99.130]    (NOT LOGIN)    D/Login       user = {"id":"1","username":"root","password":"root","nickname":"root","telephone":"","email":"","comments":"","groups":{"1":{"id":"1","name":"admin","permissions":[{"key":"category","title":"\u5206\u7c7b\u7ba1\u7406","granted":1},{"key":"product","title":"\u4ea7\u54c1\u7ba1\u7406","granted":1},{"key":"material","title":"\u539f\u6599\u7ba1\u7406","granted":1},{"key":"customer","title":"\u5ba2\u6237\u4fe1\u606f","granted":1},{"key":"vendor","title":"\u4f9b\u5e94\u5546\u4fe1\u606f","granted":1},{"key":"salesman","title":"\u4e1a\u52a1\u5458\u7ba1\u7406","granted":1},{"key":"depot","title":"\u4ed3\u5e93\u7ba1\u7406","granted":1},{"key":"productorder","title":"\u67e5\u770b\u4ea7\u54c1\u8ba2\u5355","granted":1},{"key":"productordermodify","title":"\u4fee\u6539\u4ea7\u54c1\u8ba2\u5355","granted":1},{"key":"materialorder","title":"\u67e5\u770b\u539f\u6599\u8ba2\u5355","granted":1},{"key":"materialordermodify","title":"\u4fee\u6539\u539f\u6599\u8ba2\u5355","granted":1},{"key":"customerprice","title":"\u4fee\u6539\u5ba2\u6237\u4ef7\u683c","granted":1},{"key":"wechatuser","title":"\u5fae\u4fe1\u7528\u6237","granted":1},{"key":"wechatnotify","title":"\u5fae\u4fe1\u901a\u77e5","granted":1},{"key":"wechatadmin","title":"\u5fae\u4fe1\u7ba1\u7406\u5458","granted":1},{"key":"reportsheet","title":"\u67e5\u770b\u62a5\u8868","granted":1},{"key":"balance","title":"\u7ed3\u7b97","granted":1},{"key":"user","title":"\u7528\u6237\u7ba1\u7406","granted":1},{"key":"group","title":"\u7528\u6237\u7ec4\u7ba1\u7406","granted":1},{"key":"setting","title":"\u7cfb\u7edf\u8bbe\u7f6e","granted":1}],"join":0},"2":{"id":"2","name":"\u5e93\u7ba11","permissions":[{"key":"balance","title":"\u7ed3\u7b97","granted":1}],"join":0},"5":{"id":"5","name":"test1","permissions":[{"key":"product","title":"\u4ea7\u54c1\u7ba1\u7406","granted":1},{"key":"material","title":"\u539f\u6599\u7ba1\u7406","granted":1},{"key":"customer","title":"\u5ba2\u6237\u4fe1\u606f","granted":1},{"key":"vendor","title":"\u4f9b\u5e94\u5546\u4fe1\u606f","granted":1},{"key":"salesman","title":"\u4e1a\u52a1\u5458\u7ba1\u7406","granted":1},{"key":"depot","title":"\u4ed3\u5e93\u7ba1\u7406","granted":1},{"key":"group","title":"\u7528\u6237\u7ec4\u7ba1\u7406","granted":1}],"join":0}}}
+<2017-08-25 18:00:00:092>     26472    [27.223.99.130]    (NOT LOGIN)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 18:00:00:093>     26472    [27.223.99.130]    (root)    I/Login       login success, jump to /?order/newproduct
+<2017-08-25 18:00:00:120>     26472    [27.223.99.130]    (root)    D/Portal      access: invoicing:::order_controller::newproduct_action
+<2017-08-25 18:00:00:120>     26472    [27.223.99.130]    (root)    D/Login       refer from /?order/newproduct
+<2017-08-25 18:00:00:120>     26472    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:00:121>     26472    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:00:121>     26472    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:00:121>     26472    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:00:121>     26472    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:00:121>     26472    [27.223.99.130]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:00:122>     26472    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:00:123>     26472    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:00:124>     26472    [27.223.99.130]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:00:00:124>     26472    [27.223.99.130]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:00:00:494>     26063    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::types_action
+<2017-08-25 18:00:00:495>     26063    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:00:716>     26063    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::customer_controller::list_action
+<2017-08-25 18:00:00:717>     26063    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:00:717>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:00:00:718>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:00:748>     26063    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::vendor_controller::list_action
+<2017-08-25 18:00:00:748>     26063    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:00:749>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:00:00:749>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:00:769>     26063    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::depot_controller::list_action
+<2017-08-25 18:00:00:769>     26063    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:00:770>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:00:00:770>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:00:771>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:00:771>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:00:00:771>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:00:772>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:00:772>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:00:790>     26063    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::product_controller::list_action
+<2017-08-25 18:00:00:791>     26063    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:00:791>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:00:00:791>     26063    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:22:137>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:::order_controller::newproduct_action
+<2017-08-25 18:00:22:137>     25824    [27.223.99.130]    (root)    D/Login       refer from /?order/newproduct
+<2017-08-25 18:00:22:138>     25824    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:22:138>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:22:138>     25824    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:22:138>     25824    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:22:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:22:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:22:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:00:22:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:22:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:22:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:00:22:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:00:22:334>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::types_action
+<2017-08-25 18:00:22:334>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:22:372>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::customer_controller::list_action
+<2017-08-25 18:00:22:372>     25824    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:22:373>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:00:22:373>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:22:412>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::vendor_controller::list_action
+<2017-08-25 18:00:22:413>     25824    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:22:413>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:00:22:414>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:22:427>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::depot_controller::list_action
+<2017-08-25 18:00:22:427>     25824    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:22:428>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:00:22:428>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:22:429>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:22:429>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:00:22:429>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:22:430>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:22:430>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:22:444>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::product_controller::list_action
+<2017-08-25 18:00:22:444>     25824    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:22:445>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:00:22:445>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:23:081>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:::order_controller::newproduct_action
+<2017-08-25 18:00:23:081>     25824    [27.223.99.130]    (root)    D/Login       refer from /?order/newproduct
+<2017-08-25 18:00:23:082>     25824    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:23:082>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:23:082>     25824    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:23:082>     25824    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:23:083>     25824    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:23:084>     25824    [27.223.99.130]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:00:23:085>     25824    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:23:085>     25824    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:23:085>     25824    [27.223.99.130]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:00:23:085>     25824    [27.223.99.130]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:00:23:262>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::types_action
+<2017-08-25 18:00:23:262>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:23:287>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::customer_controller::list_action
+<2017-08-25 18:00:23:287>     25824    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:23:288>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:00:23:288>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:23:312>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::vendor_controller::list_action
+<2017-08-25 18:00:23:312>     25824    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:23:312>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:00:23:313>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:23:324>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::depot_controller::list_action
+<2017-08-25 18:00:23:325>     25824    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:23:325>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:00:23:325>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:23:326>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:23:326>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:00:23:327>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:23:327>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:23:327>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:23:343>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::product_controller::list_action
+<2017-08-25 18:00:23:343>     25824    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:23:343>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:00:23:344>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:24:138>     25824    [27.223.99.130]    (root)    D/Portal      access: invoicing:::order_controller::newproduct_action
+<2017-08-25 18:00:24:139>     25824    [27.223.99.130]    (root)    D/Login       refer from /?order/newproduct
+<2017-08-25 18:00:24:139>     25824    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:24:140>     25824    [27.223.99.130]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:00:24:141>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:00:24:142>     25824    [27.223.99.130]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:00:29:716>     26736    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::types_action
+<2017-08-25 18:00:29:717>     26736    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:29:741>     26736    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::customer_controller::list_action
+<2017-08-25 18:00:29:741>     26736    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:29:743>     26736    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:00:29:744>     26736    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:29:777>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::vendor_controller::list_action
+<2017-08-25 18:00:29:778>     26735    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:29:779>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:00:29:780>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:29:802>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::depot_controller::list_action
+<2017-08-25 18:00:29:802>     26735    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:29:803>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:00:29:803>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:29:804>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:29:804>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:00:29:804>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:29:805>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:29:805>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:29:825>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::product_controller::list_action
+<2017-08-25 18:00:29:826>     26735    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:29:826>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:00:29:826>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:34:691>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:::order_controller::newproduct_action
+<2017-08-25 18:00:34:692>     26735    [27.223.99.130]    (root)    D/Login       refer from /?order/newproduct&debugroute=1
+<2017-08-25 18:00:34:692>     26735    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:34:693>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:34:693>     26735    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:34:693>     26735    [27.223.99.130]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:00:34:693>     26735    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:34:693>     26735    [27.223.99.130]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:00:34:693>     26735    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:34:693>     26735    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:00:34:694>     26735    [27.223.99.130]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:00:34:695>     26735    [27.223.99.130]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:00:34:914>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::types_action
+<2017-08-25 18:00:34:915>     26735    [27.223.99.130]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:00:34:945>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::customer_controller::list_action
+<2017-08-25 18:00:34:945>     26735    [27.223.99.130]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:00:34:946>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:00:34:946>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:34:978>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::vendor_controller::list_action
+<2017-08-25 18:00:34:978>     26735    [27.223.99.130]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:00:34:979>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:00:34:979>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:34:997>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::depot_controller::list_action
+<2017-08-25 18:00:34:997>     26735    [27.223.99.130]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:00:34:997>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:00:34:998>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:00:34:998>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:00:34:999>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:00:34:999>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:34:000>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:34:000>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:00:35:022>     26735    [27.223.99.130]    (root)    D/Portal      access: invoicing:api/v1::product_controller::list_action
+<2017-08-25 18:00:35:022>     26735    [27.223.99.130]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:00:35:022>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:00:35:023>     26735    [27.223.99.130]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:03:890>     26059    [218.2.0.52]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 18:25:03:892>     26059    [218.2.0.52]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 18:25:03:924>     26059    [218.2.0.52]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-08-25 18:25:06:147>     25832    [112.224.67.39]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 18:25:06:148>     25832    [112.224.67.39]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 18:25:06:190>     25832    [112.224.67.39]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-08-25 18:25:10:790>     26868    [112.224.67.39]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::login_controller::salt_action
+<2017-08-25 18:25:10:854>     26868    [112.224.67.39]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::login_controller::login_action
+<2017-08-25 18:25:10:856>     26868    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:25:10:857>     26868    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:10:857>     26868    [112.224.67.39]    (NOT LOGIN)    D/Login       user = {"id":"1","username":"root","password":"root","nickname":"root","telephone":"","email":"","comments":"","groups":{"1":{"id":"1","name":"admin","permissions":[{"key":"category","title":"\u5206\u7c7b\u7ba1\u7406","granted":1},{"key":"product","title":"\u4ea7\u54c1\u7ba1\u7406","granted":1},{"key":"material","title":"\u539f\u6599\u7ba1\u7406","granted":1},{"key":"customer","title":"\u5ba2\u6237\u4fe1\u606f","granted":1},{"key":"vendor","title":"\u4f9b\u5e94\u5546\u4fe1\u606f","granted":1},{"key":"salesman","title":"\u4e1a\u52a1\u5458\u7ba1\u7406","granted":1},{"key":"depot","title":"\u4ed3\u5e93\u7ba1\u7406","granted":1},{"key":"productorder","title":"\u67e5\u770b\u4ea7\u54c1\u8ba2\u5355","granted":1},{"key":"productordermodify","title":"\u4fee\u6539\u4ea7\u54c1\u8ba2\u5355","granted":1},{"key":"materialorder","title":"\u67e5\u770b\u539f\u6599\u8ba2\u5355","granted":1},{"key":"materialordermodify","title":"\u4fee\u6539\u539f\u6599\u8ba2\u5355","granted":1},{"key":"customerprice","title":"\u4fee\u6539\u5ba2\u6237\u4ef7\u683c","granted":1},{"key":"wechatuser","title":"\u5fae\u4fe1\u7528\u6237","granted":1},{"key":"wechatnotify","title":"\u5fae\u4fe1\u901a\u77e5","granted":1},{"key":"wechatadmin","title":"\u5fae\u4fe1\u7ba1\u7406\u5458","granted":1},{"key":"reportsheet","title":"\u67e5\u770b\u62a5\u8868","granted":1},{"key":"balance","title":"\u7ed3\u7b97","granted":1},{"key":"user","title":"\u7528\u6237\u7ba1\u7406","granted":1},{"key":"group","title":"\u7528\u6237\u7ec4\u7ba1\u7406","granted":1},{"key":"setting","title":"\u7cfb\u7edf\u8bbe\u7f6e","granted":1}],"join":0},"2":{"id":"2","name":"\u5e93\u7ba11","permissions":[{"key":"balance","title":"\u7ed3\u7b97","granted":1}],"join":0},"5":{"id":"5","name":"test1","permissions":[{"key":"product","title":"\u4ea7\u54c1\u7ba1\u7406","granted":1},{"key":"material","title":"\u539f\u6599\u7ba1\u7406","granted":1},{"key":"customer","title":"\u5ba2\u6237\u4fe1\u606f","granted":1},{"key":"vendor","title":"\u4f9b\u5e94\u5546\u4fe1\u606f","granted":1},{"key":"salesman","title":"\u4e1a\u52a1\u5458\u7ba1\u7406","granted":1},{"key":"depot","title":"\u4ed3\u5e93\u7ba1\u7406","granted":1},{"key":"group","title":"\u7528\u6237\u7ec4\u7ba1\u7406","granted":1}],"join":0}}}
+<2017-08-25 18:25:10:858>     26868    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 18:25:10:858>     26868    [112.224.67.39]    (root)    I/Login       login success, jump to /
+<2017-08-25 18:25:10:947>     26868    [112.224.67.39]    (root)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 18:25:10:947>     26868    [112.224.67.39]    (root)    D/Login       refer from /
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:10:948>     26868    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:10:949>     26868    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:10:950>     26868    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:17:142>     26870    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::newproduct_action
+<2017-08-25 18:25:17:144>     26870    [112.224.67.39]    (root)    D/Login       refer from /?order/newproduct
+<2017-08-25 18:25:17:144>     26870    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:17:146>     26870    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:17:146>     26870    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:17:146>     26870    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:17:146>     26870    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:17:147>     26870    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:17:148>     26870    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:17:149>     26870    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:17:149>     26870    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:17:149>     26870    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:17:726>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::types_action
+<2017-08-25 18:25:17:727>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:17:791>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::customer_controller::list_action
+<2017-08-25 18:25:17:792>     27424    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:17:793>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:25:17:794>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:17:855>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::vendor_controller::list_action
+<2017-08-25 18:25:17:856>     27424    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:17:856>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:25:17:856>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:17:915>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::depot_controller::list_action
+<2017-08-25 18:25:17:916>     27424    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:17:916>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:17:917>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:17:917>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:17:917>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:17:918>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:17:918>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:17:919>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:17:989>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::product_controller::list_action
+<2017-08-25 18:25:17:990>     27424    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:17:990>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:25:17:990>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:20:820>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::material_action
+<2017-08-25 18:25:20:821>     27424    [112.224.67.39]    (root)    D/Login       refer from /?order/material
+<2017-08-25 18:25:20:821>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:20:822>     27424    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:20:823>     27424    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:20:824>     27424    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:21:137>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::materialorder_controller::list_action
+<2017-08-25 18:25:21:137>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:21:138>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorder ORDER BY id DESC
+<2017-08-25 18:25:21:138>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:21:139>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorderrecord 
+<2017-08-25 18:25:21:139>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:21:140>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:21:140>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:21:140>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:21:141>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:25:21:141>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:21:142>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:21:142>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:21:143>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:21:967>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::mprint_action
+<2017-08-25 18:25:21:968>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorder WHERE serial = 'OD98C0D4T2017080212354655F1C9A9490B8' LIMIT 1
+<2017-08-25 18:25:21:969>     27424    [112.224.67.39]    (root)    D/Debug       Materialorder Object ( [mSummary:Materialorder:private] => Array ( [id] => 5 [serial] => OD98C0D4T2017080212354655F1C9A9490B8 [depot1] => 4 [depot2] => 0 [customer] => 0 [operator] => 0 [operatorname] => [comments] => sss [ordertime] => 1501666607 [ensuretime] => [type] => -2 [status] => 0 [totalprice] => ) [mDepot1:Materialorder:private] => [mDepot2:Materialorder:private] => [mCustomer:Materialorder:private] => [mUser:Materialorder:private] => [mRecords:Materialorder:private] => ) 
+<2017-08-25 18:25:21:969>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:22:243>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::materialorder_controller::orderinfo_action
+<2017-08-25 18:25:22:244>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:22:244>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorder WHERE serial = 'OD98C0D4T2017080212354655F1C9A9490B8' LIMIT 1
+<2017-08-25 18:25:22:245>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:22:245>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorderrecord 
+<2017-08-25 18:25:22:246>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:25:22:246>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:22:247>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:22:247>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:22:248>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:24:259>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::material_action
+<2017-08-25 18:25:24:260>     27424    [112.224.67.39]    (root)    D/Login       refer from /?order/material
+<2017-08-25 18:25:24:260>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:24:260>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:24:261>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:24:262>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:24:263>     27424    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:24:263>     27424    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:24:263>     27424    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:24:263>     27424    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:24:263>     27424    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:24:263>     27424    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:24:574>     27424    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::materialorder_controller::list_action
+<2017-08-25 18:25:24:575>     27424    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:24:575>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorder ORDER BY id DESC
+<2017-08-25 18:25:24:576>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:24:576>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorderrecord 
+<2017-08-25 18:25:24:577>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:24:577>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:24:577>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:24:578>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:24:578>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:25:24:579>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:24:579>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:24:580>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:24:580>     27424    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:30:747>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::mprint_action
+<2017-08-25 18:25:30:750>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorder WHERE serial = 'OD98C0D4T2017080212354576C2535694467' LIMIT 1
+<2017-08-25 18:25:30:750>     27425    [112.224.67.39]    (root)    D/Debug       Materialorder Object ( [mSummary:Materialorder:private] => Array ( [id] => 1 [serial] => OD98C0D4T2017080212354576C2535694467 [depot1] => 4 [depot2] => 0 [customer] => 0 [operator] => 0 [operatorname] => [comments] => [ordertime] => 1501648545 [ensuretime] => 1501667183 [type] => -2 [status] => 2 [totalprice] => 0 ) [mDepot1:Materialorder:private] => [mDepot2:Materialorder:private] => [mCustomer:Materialorder:private] => [mUser:Materialorder:private] => [mRecords:Materialorder:private] => ) 
+<2017-08-25 18:25:30:751>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:31:018>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::materialorder_controller::orderinfo_action
+<2017-08-25 18:25:31:019>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:31:019>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorder WHERE serial = 'OD98C0D4T2017080212354576C2535694467' LIMIT 1
+<2017-08-25 18:25:31:020>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:31:020>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorderrecord 
+<2017-08-25 18:25:31:021>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_product 
+<2017-08-25 18:25:31:021>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:31:022>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:31:022>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:31:023>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:32:267>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::material_action
+<2017-08-25 18:25:32:268>     27425    [112.224.67.39]    (root)    D/Login       refer from /?order/material
+<2017-08-25 18:25:32:268>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:32:268>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:32:268>     27425    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:32:269>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:32:270>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:32:271>     27425    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:32:271>     27425    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:32:271>     27425    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:32:271>     27425    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:32:271>     27425    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:32:566>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::materialorder_controller::list_action
+<2017-08-25 18:25:32:567>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:32:567>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorder ORDER BY id DESC
+<2017-08-25 18:25:32:568>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:32:568>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_materialorderrecord 
+<2017-08-25 18:25:32:569>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:32:569>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:32:570>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:32:570>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:32:571>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_vendor 
+<2017-08-25 18:25:32:571>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:32:571>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:32:572>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:32:572>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:33:927>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::product_action
+<2017-08-25 18:25:33:928>     27425    [112.224.67.39]    (root)    D/Login       refer from /?order/product
+<2017-08-25 18:25:33:928>     27425    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:33:929>     27425    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:33:930>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:33:931>     27425    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:34:364>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::list_action
+<2017-08-25 18:25:34:364>     27425    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:34:365>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorder ORDER BY id DESC
+<2017-08-25 18:25:34:366>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:34:366>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:25:34:367>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:25:34:367>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:34:368>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:368>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:34:368>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:369>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:34:369>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:34:370>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:370>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:371>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:371>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:371>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:372>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:372>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:373>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:34:373>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:34:373>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:35:407>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::pprint_action
+<2017-08-25 18:25:35:408>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:25:35:409>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 18:25:35:409>     27425    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:35:666>     27425    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::orderinfo_action
+<2017-08-25 18:25:35:667>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:25:35:668>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:35:668>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:25:35:669>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:25:35:669>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorderrecord 
+<2017-08-25 18:25:35:670>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:35:670>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:35:671>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:35:671>     27425    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:263>     25832    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::product_action
+<2017-08-25 18:25:52:264>     25832    [112.224.67.39]    (root)    D/Login       refer from /?order/product
+<2017-08-25 18:25:52:264>     25832    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:52:265>     25832    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:52:266>     25832    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:52:267>     25832    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:52:578>     25832    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::list_action
+<2017-08-25 18:25:52:578>     25832    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:52:578>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorder ORDER BY id DESC
+<2017-08-25 18:25:52:579>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:52:579>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:25:52:580>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:25:52:580>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:52:581>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:581>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:52:582>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:582>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:52:582>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:52:583>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:583>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:584>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:584>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:585>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:585>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:586>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:586>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:52:586>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:52:587>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:53:776>     25832    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::pprint_action
+<2017-08-25 18:25:53:777>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T201708022111187DBDF7CF' LIMIT 1
+<2017-08-25 18:25:53:778>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 18:25:53:778>     25832    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:54:055>     25832    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::orderinfo_action
+<2017-08-25 18:25:54:055>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T201708022111187DBDF7CF' LIMIT 1
+<2017-08-25 18:25:54:056>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:54:056>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:25:54:057>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorderrecord 
+<2017-08-25 18:25:54:057>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:54:058>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:54:058>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:54:059>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:122>     25832    [112.224.67.39]    (root)    D/Portal      access: invoicing:::order_controller::product_action
+<2017-08-25 18:25:55:123>     25832    [112.224.67.39]    (root)    D/Login       refer from /?order/product
+<2017-08-25 18:25:55:123>     25832    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:55:123>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:55:124>     25832    [112.224.67.39]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:55:125>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:55:126>     25832    [112.224.67.39]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 18:25:55:126>     25832    [112.224.67.39]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 18:25:55:126>     25832    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:55:126>     25832    [112.224.67.39]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 18:25:55:126>     25832    [112.224.67.39]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 18:25:55:126>     25832    [112.224.67.39]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 18:25:55:460>     25832    [112.224.67.39]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::list_action
+<2017-08-25 18:25:55:460>     25832    [112.224.67.39]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 18:25:55:461>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_productorder ORDER BY id DESC
+<2017-08-25 18:25:55:461>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:25:55:462>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:25:55:462>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:25:55:462>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:25:55:463>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:463>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:25:55:464>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:464>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:55:465>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:55:465>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:465>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:466>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:466>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:467>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:467>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:468>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:468>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:25:55:468>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:25:55:469>     25832    [112.224.67.39]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 18:26:01:497>     26868    [216.218.206.68]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 18:26:01:497>     26868    [216.218.206.68]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 18:26:08:570>     26850    [101.226.102.80]    (NOT LOGIN)    D/Portal      access: invoicing:::order_controller::print_action
+<2017-08-25 18:26:08:572>     26850    [101.226.102.80]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:26:08:572>     26850    [101.226.102.80]    (NOT LOGIN)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 18:26:08:901>     26731    [101.226.125.121]    (NOT LOGIN)    D/Portal      access: invoicing:::order_controller::print_action
+<2017-08-25 18:26:08:904>     26731    [101.226.125.121]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:26:08:906>     26063    [140.207.185.126]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 18:26:08:906>     26063    [140.207.185.126]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 18:26:08:907>     26870    [117.185.117.37]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 18:26:08:908>     26870    [117.185.117.37]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 18:26:08:909>     26731    [101.226.125.121]    (NOT LOGIN)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 18:26:09:138>     27424    [101.226.102.141]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::productorder_controller::orderinfo_action
+<2017-08-25 18:26:09:139>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:26:09:139>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:26:09:140>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:26:09:140>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:26:09:141>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorderrecord 
+<2017-08-25 18:26:09:141>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:26:09:142>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:26:09:142>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:26:09:142>     27424    [101.226.102.141]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:26:10:021>     26059    [112.224.67.39]    (NOT LOGIN)    D/Portal      access: invoicing:::order_controller::print_action
+<2017-08-25 18:26:10:022>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:26:10:022>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 18:26:10:601>     26059    [112.224.67.39]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::productorder_controller::orderinfo_action
+<2017-08-25 18:26:10:602>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:26:10:602>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 18:26:10:603>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 18:26:10:603>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 18:26:10:603>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorderrecord 
+<2017-08-25 18:26:10:604>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 18:26:10:604>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:26:10:605>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 18:26:10:605>     26059    [112.224.67.39]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 18:33:54:685>     27424    [61.151.226.202]    (NOT LOGIN)    D/Portal      access: invoicing:::order_controller::print_action
+<2017-08-25 18:33:54:686>     27424    [61.151.226.202]    (NOT LOGIN)    D/Database    SELECT * FROM jw_productorder WHERE serial = 'OD98C3D4T20170821123035E2A7DB86' LIMIT 1
+<2017-08-25 18:33:54:687>     27424    [61.151.226.202]    (NOT LOGIN)    D/Database    SELECT * FROM jw_setting 
+<2017-08-25 19:05:56:567>     26868    [27.210.240.232]    (root)    D/Portal      access: invoicing:::order_controller::product_action
+<2017-08-25 19:05:56:568>     26868    [27.210.240.232]    (root)    D/Login       refer from /?order/product
+<2017-08-25 19:05:56:568>     26868    [27.210.240.232]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 19:05:56:569>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 19:05:56:569>     26868    [27.210.240.232]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 19:05:56:569>     26868    [27.210.240.232]    (root)    D/Perm        check perm category for user: category
+<2017-08-25 19:05:56:569>     26868    [27.210.240.232]    (root)    D/Perm        check perm product for user: product
+<2017-08-25 19:05:56:569>     26868    [27.210.240.232]    (root)    D/Perm        check perm material for user: material
+<2017-08-25 19:05:56:569>     26868    [27.210.240.232]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm customer for user: customer
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm depot for user: depot
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-08-25 19:05:56:570>     26868    [27.210.240.232]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm balance for user: balance
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 19:05:56:571>     26868    [27.210.240.232]    (root)    D/Perm        check perm user for user: user
+<2017-08-25 19:05:56:572>     26868    [27.210.240.232]    (root)    D/Perm        check perm group for user: group
+<2017-08-25 19:05:56:572>     26868    [27.210.240.232]    (root)    D/Perm        check perm setting for user: setting
+<2017-08-25 19:05:57:129>     26868    [27.210.240.232]    (root)    D/Portal      access: invoicing:api/v1::productorder_controller::list_action
+<2017-08-25 19:05:57:129>     26868    [27.210.240.232]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-08-25 19:05:57:130>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_productorder ORDER BY id DESC
+<2017-08-25 19:05:57:130>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_depot 
+<2017-08-25 19:05:57:131>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_customer 
+<2017-08-25 19:05:57:131>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user 
+<2017-08-25 19:05:57:132>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-08-25 19:05:57:132>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:133>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_group 
+<2017-08-25 19:05:57:133>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:134>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 19:05:57:134>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 19:05:57:134>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:135>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:135>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:136>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:136>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:136>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:137>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:137>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 3 LIMIT 1
+<2017-08-25 19:05:57:138>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 19:05:57:138>     26868    [27.210.240.232]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-08-25 22:54:50:645>     26850    [182.48.105.210]    (NOT LOGIN)    D/Portal      access: invoicing:::id=1'+and+1=1+and+'<script>alert(1)<_controller::script>_action
+<2017-08-25 22:58:16:470>     26059    [58.218.213.57]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-25 22:58:16:471>     26059    [58.218.213.57]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-25 22:58:16:507>     26059    [58.218.213.57]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action

@@ -1,0 +1,321 @@
+<!-- link rel="stylesheet" href="[:app]/css/checkbox.css" -->
+<!-- link rel="stylesheet" href="[:vendor]/datatables/css/dataTables.bootstrap.css" -->
+<!-- script src="[:vendor]/datatables/js/jquery.dataTables.min.js"></script -->
+<script>var serial = "<?php echo $serial; ?>"; </script>
+<div id="page-content">
+    <div class="clear">
+        <div class="page-header text-center"><div><h3>[:orgnization]<template v-if="currentOrderType != null">{{currentOrderType.title}}</template><button class="btn btn-default pull-right" v-on:click="showTypeModal">切换类型</button></h3></div></div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="clear">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <label class="pull-left lh34">{{currentCustomerType}}：</label>
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" v-bind:placeholder="'选择' + currentCustomerType" id="search-customer" readonly v-model="currentCustomer.title">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" v-on:click="modalCustomer" v-show="currentOrderType == null || currentOrderType.target != 'production'"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-lg-offset-6 col-md-offset-4 col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <label class="pull-left lh34">仓库：</label>
+                        <div class="input-group custom-search-form">
+                            <input type="text" class="form-control" placeholder="选择仓库" readonly v-model="currentDepot.name">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button" v-on:click="showDepotModal"><i class="fa fa-search"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                <table width="100%" class="table !table-striped table-bordered table-hover" id="main-table">
+                    <thead>
+                        <tr>
+                            <th>产品</th>
+                            <th>规格</th>
+                            <th class="hidden-xs">型号</th>
+                            <th class="hidden-xs">单位</th>
+                            <th class="hidden-xs">备注</th>
+                            <th>数量</th>
+                            <th v-if="currentOrderType == null || currentOrderType.target != 'production'">总价</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="(record, rk) in order" v-on:click="showInfoModal" v-bind:rk="rk">
+                            <td><span class="lh34">{{record.product.title}}</span></td>
+                            <td><span class="lh34">{{record.product.standard}}</span></td>
+                            <td class="hidden-xs"><span class="lh34">{{record.product.mode}}</span></td>
+                            <td class="hidden-xs"><span class="lh34">{{record.product.unit}}</span></td>
+                            <td class="hidden-xs"><span class="lh34">{{record.product.comments}}</span></td>
+                            <td><span class="lh34">{{record.count}}</span></td>
+                            <td v-if="currentOrderType == null || currentOrderType.target != 'production'"><span class="lh34">{{record.largess}}</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td class="hidden-xs"></td>
+                            <td class="hidden-xs"></td>
+                            <td class="hidden-xs"></td>
+                            <td v-if="currentOrderType == null || currentOrderType.target != 'production'"></td>
+                            <td><button class="btn btn-primary pull-right" v-on:click="addNew">追加</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <div class="clear">
+                    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
+                        <input type="text" class="form-control" placeholder="订单备注" v-model.trim="comments">
+                    </div>
+                    <button class="btn btn-danger col-lg-3 col-md-3 col-sm-4 col-xs-4" v-on:click="generateOrder">{{operatorType}}临时单据</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="theTypeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog !modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">选择单据类型</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="theTypes">分类</label>
+                        <select id="theTypes" class="form-control" v-model="typeModal.type">
+                            <option v-for="type in ordertypes" v-bind:value="type.type">{{type.title}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" v-on:click="ensureSelectType">确认</button>
+                    <!-- button type="button" class="btn btn-danger pull-left" v-on:click="remove" v-if="modifyid != 0">删除</button -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="theDepotModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog !modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">选择仓库</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="theDepot">仓库</label>
+                        <select id="theDepot" class="form-control" v-model="depotModal.depot" v-if="depots != null">
+                            <option v-for="depot in depots" v-bind:value="depot.id">{{depot.name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" v-on:click="ensureSelectDepot">确认</button>
+                    <!-- button type="button" class="btn btn-danger pull-left" v-on:click="remove" v-if="modifyid != 0">删除</button -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="theCustomerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog !modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="theCustomerModalLabel">选择{{currentCustomerType}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="clear">
+                        <div class="form-group">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="搜索..." id="search-customer" v-on:input="searchCustomer" v-model.trim="search.customer">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" v-on:click="searchCustomer"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="main-table" v-if="products!= null">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>单据名</th>
+                                    <th>分类</th>
+                                    <th class="hidden-xs">地址</th>
+                                    <th class="hidden-xs">备注</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="pointer" v-for="(customer, ck) in modal.customers" v-bind:ck="ck" v-show="!customer.filteredout" v-on:click="selectCustomer" v-bind:class="{ success: customer.selected }">
+                                    <td>{{customer.name}}</td>
+                                    <td>{{customer.title}}</td>
+                                    <td>{{customer.category.name}}</td>
+                                    <td class="hidden-xs">{{customer.province}}{{customer.city}}{{customer.district}}{{customer.address}}</td>
+                                    <td class="hidden-xs">{{customer.comments}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" v-on:click="ensureSelectCustomer">确认</button>
+                    <!-- button type="button" class="btn btn-danger pull-left" v-on:click="remove" v-if="modifyid != 0">删除</button -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="theProductModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="theProductModalLabel">{{modal.title}}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="clear">
+                        <div class="form-group">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="搜索..." id="search-product" v-on:input="searchProduct" v-model.trim="search.product">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" v-on:click="searchProduct"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="heightstricted">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="main-table" v-if="products!= null">
+                            <thead>
+                                <tr>
+                                    <th>名称</th>
+                                    <th>分类</th>
+                                    <th class="hidden-xs">单位</th>
+                                    <th class="hidden-xs">规格</th>
+                                    <th class="hidden-xs">型号</th>
+                                    <th>价格</th>
+                                    <th class="hidden-xs">编号</th>
+                                    <th class="hidden-xs">来源</th>
+                                    <th class="hidden-xs">备注</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <tr class="pointer" v-for="(product, vk) in products" v-on:click="selectProduct" v-bind:vk="vk" v-if="product.show" v-show="!product.filteredout" v-bind:class="{ success: product.selected }">
+                                <td>{{product.title}}</td>
+                                <td>{{product.category.name}}</td>
+                                <td class="hidden-xs">{{product.unit}}</td>
+                                <td class="hidden-xs">{{product.standard}}</td>
+                                <td class="hidden-xs">{{product.mode}}</td>
+                                <td>{{product.price}}</td>
+                                <td class="hidden-xs">{{product.serial}}</td>
+                                <td class="hidden-xs">{{product.vendor}}</td>
+                                <td class="hidden-xs">{{product.comments}}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" v-on:click="ensureSelectProduct">增加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="theInfoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">商品信息</h4>
+                </div>
+                <div class="modal-body">
+                    <template v-if="infoModal.currentProduct != null">
+                    <div class="form-group">
+                        <table class="table table-bordered">
+                            <tr><td>产品名</td><td>{{infoModal.currentProduct.title}}</td></tr>
+                            <tr><td>分类</td><td>{{infoModal.currentProduct.category.name}}</td></tr>
+                            <tr><td>规格</td><td>{{infoModal.currentProduct.standard}}</td></tr>
+                            <tr><td>型号</td><td>{{infoModal.currentProduct.mode}}</td></tr>
+                            <tr><td>单位</td><td>{{infoModal.currentProduct.unit}}</td></tr>
+                            <tr><td>编号</td><td>{{infoModal.currentProduct.serial}}</td></tr>
+                            <tr><td>条码</td><td>{{infoModal.currentProduct.barcode}}</td></tr>
+                            <tr><td>二维码</td><td>{{infoModal.currentProduct.qrcode}}</td></tr>
+                            <tr><td>来源</td><td>{{infoModal.currentProduct.vendor}}</td></tr>
+                            <tr><td>备注</td><td>{{infoModal.currentProduct.comments}}</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="theCount">数量</label>
+                        <input type="text" class="form-control" id="theCount" placeholder="数量" v-model.trim="infoModal.count">
+                    </div>
+
+                    <div class="form-group" v-if="currentOrderType == null || currentOrderType.target != 'production'">
+                        <label for="theLargess">总价</label>
+                        <input type="text" class="form-control" id="theLargess" placeholder="总价" v-model.trim="infoModal.largess">
+                    </div>
+                    </template>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" v-on:click="ensureProductInfo">确认</button>
+                    <button type="button" class="btn btn-danger pull-left" v-on:click="removeProduct">删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="theDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">确认删除</h4>
+                </div>
+                <div class="modal-body">
+                    <div>确认要删除这个项目？</div>
+                    <div><b>{{modal.origname}}</b></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-danger" v-on:click="doRemove">确认删除</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="theDoneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">已生成订单</h4>
+                </div>
+                <div class="modal-body">
+                    <div>已生成订单：</div>
+                    <div><b>{{orderSerial}}</b></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" v-on:click="moreOrder">继续创建</button>
+                    <button type="button" class="btn btn-danger" v-on:click="viewOrder">查看订单</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

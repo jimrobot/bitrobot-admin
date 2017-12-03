@@ -1,0 +1,31 @@
+<2017-08-28 00:14:26:681>     27430    [71.6.202.204]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 00:14:26:681>     27430    [71.6.202.204]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 01:53:23:072>     26059    [209.126.136.4]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 01:53:23:073>     26059    [209.126.136.4]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 05:28:05:081>     26731    [139.162.116.133]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 05:28:05:082>     26731    [139.162.116.133]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 09:55:55:245>     2385    [210.14.78.91]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 09:55:55:266>     2385    [210.14.78.91]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 14:49:28:574>     2758    [71.6.158.166]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 14:49:28:575>     2758    [71.6.158.166]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 14:49:28:937>     2385    [71.6.158.166]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-08-28 14:49:33:012>     2641    [54.67.83.142]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 14:49:33:013>     2641    [54.67.83.142]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 15:06:38:826>     2661    [45.55.22.41]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 15:06:38:827>     2661    [45.55.22.41]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 17:59:49:689>     4175    [216.218.206.67]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 17:59:49:690>     4175    [216.218.206.67]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 18:37:13:895>     2761    [222.69.217.160]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 18:37:13:896>     2761    [222.69.217.160]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 21:49:38:899>     2657    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 21:49:38:900>     2657    [106.38.72.115]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 21:49:40:365>     2637    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 21:49:40:366>     2637    [106.38.72.115]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 22:07:43:720>     4175    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 22:07:43:720>     4175    [106.38.72.115]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 22:09:54:092>     2641    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 22:09:54:093>     2641    [106.38.72.115]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 22:10:06:580>     2657    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-08-28 22:10:06:581>     2657    [106.38.72.115]    (NOT LOGIN)    D/Login       refer from /
+<2017-08-28 22:10:07:327>     2637    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-08-28 22:10:08:231>     2655    [106.38.72.115]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action

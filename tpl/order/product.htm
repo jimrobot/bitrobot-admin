@@ -1,0 +1,62 @@
+
+<div id="page-content">
+    <div class="panel panel-default">
+        <div class="panel-heading">临时订单</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>客户</th>
+                        <th class="hidden-xs">总价</th>
+                        <th class="hidden-xs">仓库</th>
+                        <th class="hidden-xs">制单</th>
+                        <th>时间</th>
+                        <th class="hidden-xs">备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(order, vk) in orders" v-bind:vk="vk" v-if="order.status == 0" class="pointer" v-on:click="viewOrder">
+                        <td>{{order.typeTitle}}</td>
+                        <td>{{order.customer.title}}</td>
+                        <td class="hidden-xs">{{order.totalprice}}</td>
+                        <td class="hidden-xs">{{order.depot1.name}}</td>
+                        <td class="hidden-xs">{{order.operatorName}}</td>
+                        <td>{{order.ordertime}}</td>
+                        <td class="hidden-xs">{{order.comments}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">历史订单</div>
+        <div class="panel-body">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>客户</th>
+                        <th>类型</th>
+                        <th class="hidden-xs">总价</th>
+                        <th class="hidden-xs">仓库</th>
+                        <th class="hidden-xs">制单</th>
+                        <th>时间</th>
+                        <th class="hidden-xs">备注</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(order, vk) in orders" v-bind:vk="vk" v-if="order.status == 2" class="pointer" v-on:click="viewOrder">
+                        <td>{{order.customer.title}}</td>
+                        <td>{{order.typeTitle}}</td>
+                        <td class="hidden-xs">{{order.totalprice}}</td>
+                        <td class="hidden-xs">{{order.depot1.name}}</td>
+                        <td class="hidden-xs">{{order.operatorName}}</td>
+                        <td>{{order.ordertime}}</td>
+                        <td class="hidden-xs">{{order.comments}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

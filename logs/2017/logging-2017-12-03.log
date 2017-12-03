@@ -1,0 +1,25 @@
+<2017-12-03 17:56:23:565>     31930    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:::index_controller::login_action
+<2017-12-03 17:57:03:837>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::salt_action
+<2017-12-03 17:57:03:854>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::login_action
+<2017-12-03 17:57:03:855>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Error    [1] Call to undefined method database_table::database_table() at /home/kazuki/projects/kazuki/bitrobot/admin/database/db_user.class.php:18
+<2017-12-03 17:57:03:855>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Fatal    Fatal Error. Aborting...
+<2017-12-03 17:57:04:996>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::salt_action
+<2017-12-03 17:57:05:011>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::login_action
+<2017-12-03 17:57:05:011>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Error    [1] Call to undefined method database_table::database_table() at /home/kazuki/projects/kazuki/bitrobot/admin/database/db_user.class.php:18
+<2017-12-03 17:57:05:011>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Fatal    Fatal Error. Aborting...
+<2017-12-03 17:57:06:316>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::salt_action
+<2017-12-03 17:57:06:329>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::login_action
+<2017-12-03 17:57:06:330>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Error    [1] Call to undefined method database_table::database_table() at /home/kazuki/projects/kazuki/bitrobot/admin/database/db_user.class.php:18
+<2017-12-03 17:57:06:330>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Fatal    Fatal Error. Aborting...
+<2017-12-03 17:57:07:550>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::salt_action
+<2017-12-03 17:57:07:563>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::login_action
+<2017-12-03 17:57:07:564>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Error    [1] Call to undefined method database_table::database_table() at /home/kazuki/projects/kazuki/bitrobot/admin/database/db_user.class.php:18
+<2017-12-03 17:57:07:564>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Fatal    Fatal Error. Aborting...
+<2017-12-03 17:57:07:718>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::salt_action
+<2017-12-03 17:57:07:731>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::login_action
+<2017-12-03 17:57:07:731>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Error    [1] Call to undefined method database_table::database_table() at /home/kazuki/projects/kazuki/bitrobot/admin/database/db_user.class.php:18
+<2017-12-03 17:57:07:731>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Fatal    Fatal Error. Aborting...
+<2017-12-03 17:57:07:894>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::salt_action
+<2017-12-03 17:57:07:907>     2636    [39.89.159.47]    (NOT LOGIN)    D/Portal      access: admin:api/v1::login_controller::login_action
+<2017-12-03 17:57:07:907>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Error    [1] Call to undefined method database_table::database_table() at /home/kazuki/projects/kazuki/bitrobot/admin/database/db_user.class.php:18
+<2017-12-03 17:57:07:907>     2636    [39.89.159.47]    (NOT LOGIN)    E/Error.Fatal    Fatal Error. Aborting...

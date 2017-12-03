@@ -1,0 +1,87 @@
+<2017-09-01 05:54:09:443>     1746    [94.102.49.193]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 05:54:09:444>     1746    [94.102.49.193]    (NOT LOGIN)    D/Login       refer from /
+<2017-09-01 05:54:13:789>     2434    [94.102.49.193]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-09-01 07:14:32:165>     2451    [139.162.124.167]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 07:14:32:166>     2451    [139.162.124.167]    (NOT LOGIN)    D/Login       refer from /
+<2017-09-01 13:30:40:247>     3617    [27.223.99.188]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 13:30:40:248>     3617    [27.223.99.188]    (NOT LOGIN)    D/Login       refer from /
+<2017-09-01 13:30:40:272>     3617    [27.223.99.188]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::login_action
+<2017-09-01 13:30:43:639>     2433    [27.223.99.188]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::login_controller::salt_action
+<2017-09-01 13:30:43:688>     2433    [27.223.99.188]    (NOT LOGIN)    D/Portal      access: invoicing:api/v1::login_controller::login_action
+<2017-09-01 13:30:43:708>     2433    [27.223.99.188]    (NOT LOGIN)    D/Database    SELECT * FROM jw_user 
+<2017-09-01 13:30:43:708>     2433    [27.223.99.188]    (NOT LOGIN)    D/Database    SELECT * FROM jw_group 
+<2017-09-01 13:30:43:709>     2433    [27.223.99.188]    (NOT LOGIN)    D/Login       user = {"id":"1","username":"root","password":"root","nickname":"root","telephone":"","email":"","comments":"","groups":{"1":{"id":"1","name":"admin","permissions":[{"key":"category","title":"\u5206\u7c7b\u7ba1\u7406","granted":1},{"key":"product","title":"\u4ea7\u54c1\u7ba1\u7406","granted":1},{"key":"material","title":"\u539f\u6599\u7ba1\u7406","granted":1},{"key":"customer","title":"\u5ba2\u6237\u4fe1\u606f","granted":1},{"key":"vendor","title":"\u4f9b\u5e94\u5546\u4fe1\u606f","granted":1},{"key":"salesman","title":"\u4e1a\u52a1\u5458\u7ba1\u7406","granted":1},{"key":"depot","title":"\u4ed3\u5e93\u7ba1\u7406","granted":1},{"key":"productorder","title":"\u67e5\u770b\u4ea7\u54c1\u8ba2\u5355","granted":1},{"key":"productordermodify","title":"\u4fee\u6539\u4ea7\u54c1\u8ba2\u5355","granted":1},{"key":"materialorder","title":"\u67e5\u770b\u539f\u6599\u8ba2\u5355","granted":1},{"key":"materialordermodify","title":"\u4fee\u6539\u539f\u6599\u8ba2\u5355","granted":1},{"key":"customerprice","title":"\u4fee\u6539\u5ba2\u6237\u4ef7\u683c","granted":1},{"key":"wechatuser","title":"\u5fae\u4fe1\u7528\u6237","granted":1},{"key":"wechatnotify","title":"\u5fae\u4fe1\u901a\u77e5","granted":1},{"key":"wechatadmin","title":"\u5fae\u4fe1\u7ba1\u7406\u5458","granted":1},{"key":"reportsheet","title":"\u67e5\u770b\u62a5\u8868","granted":1},{"key":"balance","title":"\u7ed3\u7b97","granted":1},{"key":"user","title":"\u7528\u6237\u7ba1\u7406","granted":1},{"key":"group","title":"\u7528\u6237\u7ec4\u7ba1\u7406","granted":1},{"key":"setting","title":"\u7cfb\u7edf\u8bbe\u7f6e","granted":1}],"join":0},"2":{"id":"2","name":"\u5e93\u7ba11","permissions":[{"key":"balance","title":"\u7ed3\u7b97","granted":1}],"join":0},"5":{"id":"5","name":"test1","permissions":[{"key":"product","title":"\u4ea7\u54c1\u7ba1\u7406","granted":1},{"key":"material","title":"\u539f\u6599\u7ba1\u7406","granted":1},{"key":"customer","title":"\u5ba2\u6237\u4fe1\u606f","granted":1},{"key":"vendor","title":"\u4f9b\u5e94\u5546\u4fe1\u606f","granted":1},{"key":"salesman","title":"\u4e1a\u52a1\u5458\u7ba1\u7406","granted":1},{"key":"depot","title":"\u4ed3\u5e93\u7ba1\u7406","granted":1},{"key":"group","title":"\u7528\u6237\u7ec4\u7ba1\u7406","granted":1}],"join":0}}}
+<2017-09-01 13:30:43:709>     2433    [27.223.99.188]    (NOT LOGIN)    D/Database    SELECT * FROM jw_setting 
+<2017-09-01 13:30:43:709>     2433    [27.223.99.188]    (root)    I/Login       login success, jump to /
+<2017-09-01 13:30:43:720>     2433    [27.223.99.188]    (root)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 13:30:43:721>     2433    [27.223.99.188]    (root)    D/Login       refer from /
+<2017-09-01 13:30:43:751>     2433    [27.223.99.188]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-09-01 13:30:43:751>     2433    [27.223.99.188]    (root)    D/Perm        check perm category for user: category
+<2017-09-01 13:30:43:751>     2433    [27.223.99.188]    (root)    D/Perm        check perm category for user: category
+<2017-09-01 13:30:43:751>     2433    [27.223.99.188]    (root)    D/Perm        check perm product for user: product
+<2017-09-01 13:30:43:751>     2433    [27.223.99.188]    (root)    D/Perm        check perm material for user: material
+<2017-09-01 13:30:43:751>     2433    [27.223.99.188]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm customer for user: customer
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm depot for user: depot
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:43:752>     2433    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:43:753>     2433    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:43:753>     2433    [27.223.99.188]    (root)    D/Perm        check perm balance for user: balance
+<2017-09-01 13:30:43:753>     2433    [27.223.99.188]    (root)    D/Perm        check perm user for user: user
+<2017-09-01 13:30:43:753>     2433    [27.223.99.188]    (root)    D/Perm        check perm user for user: user
+<2017-09-01 13:30:43:753>     2433    [27.223.99.188]    (root)    D/Perm        check perm group for user: group
+<2017-09-01 13:30:43:753>     2433    [27.223.99.188]    (root)    D/Perm        check perm setting for user: setting
+<2017-09-01 13:30:45:386>     3617    [27.223.99.188]    (root)    D/Portal      access: invoicing:::organization_controller::category_action
+<2017-09-01 13:30:45:411>     3617    [27.223.99.188]    (root)    D/Login       refer from /?organization/category
+<2017-09-01 13:30:45:411>     3617    [27.223.99.188]    (root)    D/Perm        check perm category for user: category
+<2017-09-01 13:30:45:412>     3617    [27.223.99.188]    (root)    D/Database    SELECT * FROM jw_user WHERE id = 1 LIMIT 1
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm category for user: category
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm category for user: category
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm product for user: product
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm material for user: material
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm vendor for user: vendor
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm customer for user: customer
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm salesman for user: salesman
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm depot for user: depot
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm productorder for user: productorder
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm materialorder for user: materialorder
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm productordermodify for user: productordermodify
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm materialordermodify for user: materialordermodify
+<2017-09-01 13:30:45:413>     3617    [27.223.99.188]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm customerprice for user: customerprice
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm wechatuser for user: wechatuser
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm wechatnotify for user: wechatnotify
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm wechatadmin for user: wechatadmin
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm reportsheet for user: reportsheet
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm balance for user: balance
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm user for user: user
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm user for user: user
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm group for user: group
+<2017-09-01 13:30:45:414>     3617    [27.223.99.188]    (root)    D/Perm        check perm setting for user: setting
+<2017-09-01 13:30:45:547>     2434    [27.223.99.188]    (root)    D/Portal      access: invoicing:api/v1::category_controller::list_action
+<2017-09-01 13:30:45:553>     2434    [27.223.99.188]    (root)    D/Perm        check perm category for user: category
+<2017-09-01 13:30:45:553>     2434    [27.223.99.188]    (root)    D/Database    SELECT * FROM jw_category 
+<2017-09-01 14:34:05:721>     3816    [193.63.58.83]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 14:34:05:722>     3816    [193.63.58.83]    (NOT LOGIN)    D/Login       refer from /
+<2017-09-01 16:22:52:419>     2433    [184.105.247.252]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 16:22:52:419>     2433    [184.105.247.252]    (NOT LOGIN)    D/Login       refer from /
+<2017-09-01 17:36:27:644>     4141    [45.55.21.97]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 17:36:27:645>     4141    [45.55.21.97]    (NOT LOGIN)    D/Login       refer from /
+<2017-09-01 18:46:42:974>     3853    [186.220.140.137]    (NOT LOGIN)    D/Portal      access: invoicing:::index_controller::index_action
+<2017-09-01 18:46:42:975>     3853    [186.220.140.137]    (NOT LOGIN)    D/Login       refer from /

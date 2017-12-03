@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="[:app]/css/checkbox.css">
+<div id="page-content">
+    <div class="clear">
+        <div class="col-md-2 col-lg-2 hidden-xs hidden-sm border-r full-height">
+            <ul v-if="root != null">
+                <category-tree v-bind:node="c" v-for="c in root.children" :key="c.id"></category-tree>
+            </ul>
+        </div>
+        <div class="col-md-10 col-lg-10 col-xs-12 col-sm-12 full-height clear" v-if="root != null">
+            <div class="pathview fill m-b-10"><span v-for="pth in viewpath">/<a href="#" v-bind:cid="pth.node" v-on:click="enterCategory">{{pth.title}}</a></span></div>
+            <div class="pull-left col-xs-6 col-sm-3 col-md-3 col-lg-2 category-node category-node-size" v-for="node in currentNode.children" v-bind:cid="node.id" v-on:click="enterCategory">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 category-node-content">
+                    <div class="modal-header" style="padding-left: 0px; padding-right: 0px;">
+                        <button type="button" class="close" v-bind:cid="node.id" v-on:click="edit" v-if="node.pid != 0"><i class="fa fa-fw fa-edit"></i></button>
+                        <h4 class="modal-title text-left"><strong>{{node.name}}</strong></h4>
+                    </div>
+                    <div class="modal-body">
+                    </div>
+                </div>
+            </div>
+
+            <div class="pull-left col-xs-6 col-sm-3 col-md-3 col-lg-2 category-node category-node-size" v-on:click="addNew" v-if="currentNode.id != 0">
+                <div class="new-category">
+                    <div class="plus-wrapper">
+                        <div class="plus plus-tl"></div>
+                        <div class="plus plus-rl"></div>
+                        <div class="plus plus-tb"></div>
+                        <div class="plus plus-rb"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="theModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="theModalLabel">{{modal.title}}</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group" v-bind:class="{ 'has-error': modal.name == '' }">
+                    <label for="theName">名称</label>
+                    <input type="text" class="form-control" id="theName" placeholder="名称" v-model.trim="modal.name">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" v-on:click="ensure">确认</button>
+                <button type="button" class="btn btn-danger pull-left" v-on:click="remove" v-if="modifyid != 0">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="theDeleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">确认删除</h4>
+            </div>
+            <div class="modal-body">
+                <div>确认要删除这个项目？</div>
+                <div><b>{{modal.origname}}</b></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-danger" v-on:click="doRemove">确认删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
