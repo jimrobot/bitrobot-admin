@@ -61,78 +61,16 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav in" id="side-menu">
-                        <?php if (login::hasPerm(Permission::kCategory) ||
-                                  login::hasPerm(Permission::kProduct) ||
-                                  login::hasPerm(Permission::kMaterial) ||
-                                  login::hasPerm(Permission::kVendor) ||
-                                  login::hasPerm(Permission::kCustomer) ||
-                                  login::hasPerm(Permission::kSalesman) ||
-                                  login::hasPerm(Permission::kDepot)) { ?>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>&nbsp;组织<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <?php if (login::hasPerm(Permission::kCategory)) { ?><li><a href="?organization/category">分类</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kProduct)) { ?><li><a href="?organization/product">产品</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kMaterial)) { ?><li><a href="?organization/material">原料</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kVendor)) { ?><li><a href="?organization/vendor">供应商</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kCustomer)) { ?><li><a href="?organization/customer">客户</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kSalesman)) { ?><li><a href="?organization/salesman">业务员</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kDepot)) { ?><li><a href="?organization/depot">仓库</a></li><?php } ?>
-                            </ul>
-                        </li>
-                        <?php } ?>
-                        <?php if (login::hasPerm(Permission::kProductOrder) ||
-                                  login::hasPerm(Permission::kMaterialOrder) ||
-                                  login::hasPerm(Permission::kProductOrderModify) ||
-                                  login::hasPerm(Permission::kMaterialOrderModify)) { ?>
-                        <li>
-                            <a href="#"><i class="fa fa-dashboard fa-fw"></i>&nbsp;单据<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <?php if (login::hasPerm(Permission::kProductOrder)) { ?><li><a href="?order/product">产品单据</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kMaterialOrder)) { ?><li><a href="?order/material">原料单据</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kProductOrderModify)) { ?><li><a href="?order/newproduct">新建产品单据</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kMaterialOrderModify)) { ?><li><a href="?order/newmaterial">新建原料单据</a></li><?php } ?>
-                            </ul>
-                        </li>
-                        <?php } ?>
-                        <?php if (login::hasPerm(Permission::kCustomerPrice) ||
-                                  login::hasPerm(Permission::kWechatUser) ||
-                                  login::hasPerm(Permission::kWechatNotify) ||
-                                  login::hasPerm(Permission::kWechatAdmin)) { ?>
-                        <li>
-                            <a href="#"><i class="fa fa-money fa-fw"></i>&nbsp;业务<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <?php if (login::hasPerm(Permission::kCustomerPrice)) { ?><li><a href="?business/pricecustomer">客户价格</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kWechatUser)) { ?><li><a href="?business/wechatuser">微信用户</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kWechatNotify)) { ?><li><a href="?business/wechatcustomer">微信通知</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kWechatAdmin)) { ?><li><a href="?business/wechatadmin">管理员微信</a></li><?php } ?>
-                            </ul>
-                        </li>
-                        <?php } ?>
-                        <?php if (login::hasPerm(Permission::kReportSheet) ||
-                                  login::hasPerm(Permission::kBalance)) { ?>
-                        <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i>&nbsp;报表<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <?php if (login::hasPerm(Permission::kReportSheet)) { ?><li><a href="?report/price">价目表</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kReportSheet)) { ?><li><a href="?report/sales">销售排行</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kReportSheet)) { ?><li><a href="?report/salesanalysing">销售分析</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kBalance)) { ?><li><a href="?report/balance">结算</a></li><?php } ?>
-                            </ul>
-                        </li>
-                        <?php } ?>
-                        <?php if (login::hasPerm(Permission::kUser) ||
-                                  login::hasPerm(Permission::kGroup) ||
-                                  login::hasPerm(Permission::kSetting)) { ?>
+
                         <li>
                             <a href="#"><i class="fa fa-wrench fa-fw"></i>&nbsp;系统<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <?php if (login::hasPerm(Permission::kUser)) { ?><li><a href="?user/user">用户</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kGroup)) { ?><li><a href="?user/group">用户组</a></li><?php } ?>
-                                <?php if (login::hasPerm(Permission::kSetting)) { ?><li><a href="?setting">设置</a></li><?php } ?>
+                                <li><a href="?user/user">用户</a></li>
+                                <li><a href="?user/group">文件管理</a></li>
+                                <li><a href="?setting">设置</a></li>
                             </ul>
                         </li>
-                        <?php } ?>
+                      
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->

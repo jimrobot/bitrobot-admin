@@ -43,6 +43,7 @@ class login {
     }
 
     public static function assert() {
+        return;
         $refer = $_SERVER["REQUEST_URI"];
         logging::d("Login", "refer from $refer");
         $_SESSION["login.refer"] = $refer;
@@ -58,6 +59,7 @@ class login {
     }
 
     public static function assertPerm($pkey) {
+        return;
         if (!self::hasPerm($pkey)) {
             include(FRAMEWORK_PATH . "/notfound.php");
             die("");

@@ -14,7 +14,7 @@ class db_user extends database_table {
         return self::$instance;
     }
 
-    private function db_user() {
+    protected function __construct() {
         parent::database_table(MYSQL_DATABASE, MYSQL_PREFIX . "user");
     }
 

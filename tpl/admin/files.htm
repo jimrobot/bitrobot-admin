@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="[:app]/css/checkbox.css">
+<div id="page-content">
+    <div class="clear">
+        <div class="user border radius m-t-15 col-md-3" v-for="(user, uk) in users" v-if="user.id != 1" v-cloak>
+            <div class="modal-header">
+                <button type="button" class="close" v-bind:uk="uk" v-on:click="removeUser"><i class="fa fa-fw fa-times"></i></button>
+                <button type="button" class="close" v-bind:uk="uk" v-on:click="editUser"><i class="fa fa-fw fa-edit"></i></button>
+                <h5 class="modal-title text-center"><strong>{{user.nickname}}</strong></h5>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <p class="modal-title">帐号：{{user.username}}</p>
+                    <p class="modal-title">密码：{{user.password}}</p>
+                    <p class="modal-title">电话：{{user.telephone}}</p>
+                    <p class="modal-title">邮箱：{{user.email}}</p>
+                    <p class="modal-title">备注：{{user.comments}}</p>
+                </div>
+                <div class="" v-for="(group, gk) in user.groups">
+                    <div class="checkbox-slider--b-flat checkbox-slider-md" v-bind:uk="uk" v-bind:gk="gk" v-on:change="update"><label><input type="checkbox" v-model="group.join" /><span>{{group.name}}</span></label></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="btn btn-primary col-md-12 col-xs-12 col-sm-12 m-t-15" id="newUser">新增</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="newUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="newUserModalLabel">{{modal.label}}</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group" id="newUsernameForm" v-bind:class="{ 'has-error': modal.username.trim() == '' }">
+                        <label for="newUserUsername">登陆帐号</label>
+                        <input type="text" class="form-control" id="newUserUsername" placeholder="登陆帐号" v-model="modal.username">
+                    </div>
+                    <div class="form-group" id="newPasswordForm" v-bind:class="{ 'has-error': modal.password.trim() == '' }">
+                        <label for="newUserPassword">密码</label>
+                        <input type="text" class="form-control" id="newUserPassword" placeholder="密码" v-model="modal.password">
+                    </div>
+
+                    <div class="form-group" id="newNicknameForm">
+                        <label for="newUserNickname">姓名</label>
+                        <input type="text" class="form-control" id="newUserNickname" placeholder="姓名" v-model="modal.nickname">
+                    </div>
+
+                    <div class="form-group" id="newTelephoneForm">
+                        <label for="newUserTelephone">电话</label>
+                        <input type="text" class="form-control" id="newUserTelephone" placeholder="电话" v-model="modal.telephone">
+                    </div>
+
+                    <div class="form-group" id="newEmailForm">
+                        <label for="newUserEmail">邮箱</label>
+                        <input type="email" class="form-control" id="newUserEmail" placeholder="邮箱" v-model="modal.email">
+                    </div>
+                    <div class="form-group" id="newCommentsForm">
+                        <label for="newUserComments">备注</label>
+                        <input type="text" class="form-control" id="newUserComments" placeholder="备注" v-model="modal.comments">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="addNewUser">确认</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
