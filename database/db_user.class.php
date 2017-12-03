@@ -15,7 +15,7 @@ class db_user extends database_table {
     }
 
     protected function __construct() {
-        parent::database_table(MYSQL_DATABASE, MYSQL_PREFIX . "user");
+        parent::__construct(MYSQL_DATABASE, MYSQL_PREFIX . "user");
     }
 
     public function get($id) {

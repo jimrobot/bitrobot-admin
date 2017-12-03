@@ -16,7 +16,7 @@ class login {
     private $mRefer = null;
     private $mUser = null;
 
-    private function login() {
+    private function __construct() {
         $salt = get_session("login.salt");
         if ($salt == null) {
             $salt = md5(uniqid());

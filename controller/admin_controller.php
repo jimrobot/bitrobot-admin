@@ -6,6 +6,11 @@ class admin_controller {
         // login::assert();
     }
 
+    public function index_action() {
+        $tpl = new tpl();
+        $tpl->display('login/login');
+    }
+
     public function user_action() {
         $tpl = new tpl("header", "footer");
         $tpl->display("admin/user");
@@ -19,6 +24,7 @@ class admin_controller {
     public function setting_action() {
         $tpl = new tpl("header", "footer");
         $tpl->display("admin/setting");
+
     }
 
 }

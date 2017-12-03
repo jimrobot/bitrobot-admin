@@ -10,8 +10,8 @@ class db_setting extends database_table {
         return self::$instance;
     }
 
-    public function db_setting() {
-        parent::database_table(MYSQL_DATABASE, MYSQL_PREFIX . "setting");
+    public function __construct() {
+        parent::__construct(MYSQL_DATABASE, MYSQL_PREFIX . "setting");
     }
 
     public function load_all() {

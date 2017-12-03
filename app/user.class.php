@@ -5,7 +5,7 @@ class User {
     private $mSummary = null;
     private $mGroups = null;
 
-    public function User($summary = array()) {
+    public function __construct($summary = array()) {
         if (empty($summary)) {
             $summary = array(
                 "id" => 0,
