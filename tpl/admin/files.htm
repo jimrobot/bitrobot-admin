@@ -3,8 +3,8 @@
     <div class="clear">
         <div class="user border radius m-t-15 col-md-3" v-for="(user, uk) in users" v-if="user.id != 1" v-cloak>
             <div class="modal-header">
-                <button type="button" class="close" v-bind:uk="uk" v-on:click="removeUser"><i class="fa fa-fw fa-times"></i></button>
-                <button type="button" class="close" v-bind:uk="uk" v-on:click="editUser"><i class="fa fa-fw fa-edit"></i></button>
+                <button type="button" class="close" v-bind:uk="uk" v-on:click="removeFile"><i class="fa fa-fw fa-times"></i></button>
+                <button type="button" class="close" v-bind:uk="uk" v-on:click="editFile"><i class="fa fa-fw fa-edit"></i></button>
                 <h5 class="modal-title text-center"><strong>{{user.nickname}}</strong></h5>
             </div>
             <div class="modal-body">
@@ -22,52 +22,52 @@
         </div>
     </div>
     <div>
-        <button class="btn btn-primary col-md-12 col-xs-12 col-sm-12 m-t-15" id="newUser">新增</button>
+        <button class="btn btn-primary col-md-12 col-xs-12 col-sm-12 m-t-15" id="newFile">新增</button>
     </div>
 </div>
 
 <!-- Modal -->
-<div class="modal fade" id="newUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+<div class="modal fade" id="newFileModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="newUserModalLabel">{{modal.label}}</h4>
+                <h4 class="modal-title" id="newFileModalLabel">{{modal.label}}</h4>
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group" id="newUsernameForm" v-bind:class="{ 'has-error': modal.username.trim() == '' }">
-                        <label for="newUserUsername">登陆帐号</label>
-                        <input type="text" class="form-control" id="newUserUsername" placeholder="登陆帐号" v-model="modal.username">
+                    <div class="form-group" id="newFilenameForm" v-bind:class="{ 'has-error': modal.username.trim() == '' }">
+                        <label for="newFileFilename">登陆帐号</label>
+                        <input type="text" class="form-control" id="newFileFilename" placeholder="登陆帐号" v-model="modal.username">
                     </div>
                     <div class="form-group" id="newPasswordForm" v-bind:class="{ 'has-error': modal.password.trim() == '' }">
-                        <label for="newUserPassword">密码</label>
-                        <input type="text" class="form-control" id="newUserPassword" placeholder="密码" v-model="modal.password">
+                        <label for="newFilePassword">密码</label>
+                        <input type="text" class="form-control" id="newFilePassword" placeholder="密码" v-model="modal.password">
                     </div>
 
                     <div class="form-group" id="newNicknameForm">
-                        <label for="newUserNickname">姓名</label>
-                        <input type="text" class="form-control" id="newUserNickname" placeholder="姓名" v-model="modal.nickname">
+                        <label for="newFileNickname">姓名</label>
+                        <input type="text" class="form-control" id="newFileNickname" placeholder="姓名" v-model="modal.nickname">
                     </div>
 
                     <div class="form-group" id="newTelephoneForm">
-                        <label for="newUserTelephone">电话</label>
-                        <input type="text" class="form-control" id="newUserTelephone" placeholder="电话" v-model="modal.telephone">
+                        <label for="newFileTelephone">电话</label>
+                        <input type="text" class="form-control" id="newFileTelephone" placeholder="电话" v-model="modal.telephone">
                     </div>
 
                     <div class="form-group" id="newEmailForm">
-                        <label for="newUserEmail">邮箱</label>
-                        <input type="email" class="form-control" id="newUserEmail" placeholder="邮箱" v-model="modal.email">
+                        <label for="newFileEmail">邮箱</label>
+                        <input type="email" class="form-control" id="newFileEmail" placeholder="邮箱" v-model="modal.email">
                     </div>
                     <div class="form-group" id="newCommentsForm">
-                        <label for="newUserComments">备注</label>
-                        <input type="text" class="form-control" id="newUserComments" placeholder="备注" v-model="modal.comments">
+                        <label for="newFileComments">备注</label>
+                        <input type="text" class="form-control" id="newFileComments" placeholder="备注" v-model="modal.comments">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary" id="addNewUser">确认</button>
+                <button type="button" class="btn btn-primary" id="addNewFile">确认</button>
             </div>
         </div>
     </div>
