@@ -1,25 +1,22 @@
 <link rel="stylesheet" href="[:app]/css/checkbox.css">
 <div id="page-content">
     <div class="clear">
-        <div class="user border radius m-t-15 col-md-3" v-for="(user, uk) in users" v-if="user.id != 1" v-cloak>
-            <div class="modal-header">
-                <button type="button" class="close" v-bind:uk="uk" v-on:click="removeFile"><i class="fa fa-fw fa-times"></i></button>
-                <button type="button" class="close" v-bind:uk="uk" v-on:click="editFile"><i class="fa fa-fw fa-edit"></i></button>
-                <h5 class="modal-title text-center"><strong>{{user.nickname}}</strong></h5>
-            </div>
-            <div class="modal-body">
-                <div>
-                    <p class="modal-title">帐号：{{user.username}}</p>
-                    <p class="modal-title">密码：{{user.password}}</p>
-                    <p class="modal-title">电话：{{user.telephone}}</p>
-                    <p class="modal-title">邮箱：{{user.email}}</p>
-                    <p class="modal-title">备注：{{user.comments}}</p>
-                </div>
-                <div class="" v-for="(group, gk) in user.groups">
-                    <div class="checkbox-slider--b-flat checkbox-slider-md" v-bind:uk="uk" v-bind:gk="gk" v-on:change="update"><label><input type="checkbox" v-model="group.join" /><span>{{group.name}}</span></label></div>
-                </div>
-            </div>
-        </div>
+        <table width="100%" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>文件</th>
+                    <th>标题</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(f, fk) in files" v-cloak v-on:click="editFile" v-bind:fk="fk">
+                    <td>{{f.filename}}</td>
+                    <td>{{f.title}}</td>
+                    <td>{{f.comments}}</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     <div>
         <button class="btn btn-primary col-md-12 col-xs-12 col-sm-12 m-t-15" id="newFile">新增</button>
@@ -36,32 +33,21 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <div class="form-group" id="newFilenameForm" v-bind:class="{ 'has-error': modal.username.trim() == '' }">
-                        <label for="newFileFilename">登陆帐号</label>
-                        <input type="text" class="form-control" id="newFileFilename" placeholder="登陆帐号" v-model="modal.username">
+                    <div class="form-group" id="newFilenameForm" v-bind:class="{ 'has-error': modal.filename.trim() == '' }">
+                        <label for="newFileFilename">文件名</label>
+                        <input type="text" class="form-control" id="newFileFilename" placeholder="下载后的文件名" v-model="modal.filename">
                     </div>
-                    <div class="form-group" id="newPasswordForm" v-bind:class="{ 'has-error': modal.password.trim() == '' }">
-                        <label for="newFilePassword">密码</label>
-                        <input type="text" class="form-control" id="newFilePassword" placeholder="密码" v-model="modal.password">
-                    </div>
-
-                    <div class="form-group" id="newNicknameForm">
-                        <label for="newFileNickname">姓名</label>
-                        <input type="text" class="form-control" id="newFileNickname" placeholder="姓名" v-model="modal.nickname">
-                    </div>
-
-                    <div class="form-group" id="newTelephoneForm">
-                        <label for="newFileTelephone">电话</label>
-                        <input type="text" class="form-control" id="newFileTelephone" placeholder="电话" v-model="modal.telephone">
-                    </div>
-
-                    <div class="form-group" id="newEmailForm">
-                        <label for="newFileEmail">邮箱</label>
-                        <input type="email" class="form-control" id="newFileEmail" placeholder="邮箱" v-model="modal.email">
+                    <div class="form-group" id="newPasswordForm" v-bind:class="{ 'has-error': modal.title.trim() == '' }">
+                        <label for="newFileTitle">标题</label>
+                        <input type="text" class="form-control" id="newFileTitle" placeholder="显示在页面的标题" v-model="modal.title">
                     </div>
                     <div class="form-group" id="newCommentsForm">
                         <label for="newFileComments">备注</label>
                         <input type="text" class="form-control" id="newFileComments" placeholder="备注" v-model="modal.comments">
+                    </div>
+                    <div class="form-group" id="newFileForm" v-if="editfid == 0">
+                        <label for="newFileUpload">选择文件</label>
+                        <input type="file" id="newFileUpload" />
                     </div>
                 </form>
             </div>

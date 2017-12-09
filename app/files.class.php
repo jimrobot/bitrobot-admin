@@ -58,16 +58,16 @@ class Files {
     }
 
     public function save() {
-        // $id = $this->id();
-        // if ($id == 0) {
-        //     $id = db_user::inst()->add($this->username(), $this->password(), $this->nickname(), $this->telephone(), $this->email(), $this->mSummary["groups"], $this->comments());
-        //     if ($id !== false) {
-        //         $this->mSummary["id"] = $id;
-        //     }
-        // } else {
-        //     $id = db_user::inst()->modify($id, $this->username(), $this->password(), $this->nickname(), $this->telephone(), $this->email(), $this->mSummary["groups"], $this->comments());
-        // }
-        // return $id;
+        $id = $this->id();
+        if ($id == 0) {
+            $id = db_files::inst()->add($this->filename(), $this->title(), $this->comments(), $this->path());
+            if ($id !== false) {
+                $this->mSummary["id"] = $id;
+            }
+        } else {
+            $id = db_files::inst()->modify($id, $this->filename(), $this->title(), $this->comments());
+        }
+        return $id;
     }
 
     // private static function cachedAllGroups() {
@@ -91,43 +91,43 @@ class Files {
     }
 
     public static function create($uid) {
-        $user = db_user::inst()->get($uid);
-        return new User($user);
+        $files = db_files::inst()->get($uid);
+        return new Files($files);
     }
 
     public static function all($include_deleted = false) {
-        $users = db_user::inst()->all();
+        $files = db_files::inst()->all();
         $arr = array();
-        foreach ($users as $uid => $user) {
+        foreach ($files as $fid => $file) {
             if (!$include_deleted) {
-                if ($user["status"] == db_user::STATUS_DELETED) {
+                if ($file["status"] == db_user::STATUS_DELETED) {
                     continue;
                 }
             }
-            $arr[$uid] = new User($user);
+            $arr[$fid] = new Files($file);
         }
         return $arr;
     }
 
-    public static function &cachedAll() {
-        $cache = cache::instance();
-        $all = $cache->load("class.user.all", null);
-        if ($all === null) {
-            $all = User::all();
-            $cache->save("class.user.all", $all);
-        }
-        return $all;
-    }
+    // public static function &cachedAll() {
+    //     $cache = cache::instance();
+    //     $all = $cache->load("class.user.all", null);
+    //     if ($all === null) {
+    //         $all = User::all();
+    //         $cache->save("class.user.all", $all);
+    //     }
+    //     return $all;
+    // }
 
-    public static function oneByName($username) {
-        $users = self::cachedAll();
-        foreach ($users as $user) {
-            if ($user->username() == $username) {
-                return $user;
-            }
-        }
-        return null;
-    }
+    // public static function oneByName($username) {
+    //     $users = self::cachedAll();
+    //     foreach ($users as $user) {
+    //         if ($user->username() == $username) {
+    //             return $user;
+    //         }
+    //     }
+    //     return null;
+    // }
 
     public static function remove($uid) {
         return db_user::inst()->remove($uid);

@@ -13,8 +13,8 @@ class db_files extends database_table {
         return self::$instance;
     }
 
-    private function db_files() {
-        parent::database_table(MYSQL_DATABASE, MYSQL_PREFIX . "files");
+    protected function __construct() {
+        parent::__construct(MYSQL_DATABASE, MYSQL_PREFIX . "files");
     }
 
     public function get($id) {
@@ -26,13 +26,13 @@ class db_files extends database_table {
         return $this->get_all();
     }
 
-    public function add($name) {
-        return $this->insert(array("name" => $name));
+    public function add($filename, $title, $comments, $path) {
+        return $this->insert(array("filename" => $filename, "title" => $title, "comments" => $comments, "path" => $path, "status" => self::STATUS_NORMAL));
     }
 
-    public function modify($id, $name) {
+    public function modify($id, $filename, $title, $comments) {
         $id = (int)$id;
-        return $this->update(array("name" => $name), "id = $id");
+        return $this->update(array("filename" => $filename, "title" => $title, "comments" => $comments), "id = $id");
     }
 
     public function remove($id) {

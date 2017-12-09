@@ -130,7 +130,26 @@ function __ajax_and_reload(action, data, message_on_success) {
     __ajax(action, data, true, false, message_on_success);
 }
 
-function __file_upload(obj, success, fail, extra) {
+function __file_upload(action, obj, arg, success, fail) {
+    if (typeof FileReader == 'undefined') {
+        alert("您的浏览器不支持上传，请更换浏览器重试！");
+        return;
+    }
+
+    var file = obj.files[0];
+    var reader = new FileReader();
+    var onload = function(e) {
+        console.debug(e);
+        var data = e.target.result;
+        __request(action, {arg: arg, data: data}, success, fail);
+    };
+
+    reader.onload = onload;
+    console.debug("upload file " + file + " to " + action);
+    reader.readAsDataURL(file);
+}
+
+function __image_upload(obj, success, fail, extra) {
     if (typeof FileReader == 'undefined') {
         alert("您的浏览器不支持上传，请更换浏览器重试！");
         return;

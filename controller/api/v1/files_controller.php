@@ -8,28 +8,41 @@ class files_controller extends v1_base {
     }
 
     public function list_action() {
-        $users = User::all(false);
-        $data = $this->packArray($users);
-        return array("op" => "users", "data" => $data);
+        $files = Files::all(false);
+        $data = $this->packArray($files);
+        return array("op" => "files", "data" => $data);
     }
 
-    public function adduser_action() {
-        $username = get_request_assert("username");
-        $password = get_request_assert("password");
-        $nickname = get_request_assert("nickname");
-        $telephone = get_request_assert("telephone");
-        $email = get_request_assert("email");
-        $comments = get_request_assert("comments");
+    public function upload_action() {
+        logging::d("Debug", $_REQUEST);
+        $arg = get_request_assert("arg");
+        $filename = $arg["filename"];
+        $title = $arg["title"];
+        $comments = $arg["comments"];
 
-        $user = new User();
-        $user->setUsername($username);
-        $user->setPassword($password);
-        $user->setNickname($nickname);
-        $user->setTelephone($telephone);
-        $user->setEmail($email);
-        $user->setComments($comments);
-        $user->save();
-        return $this->op("newuser", $user->packInfo());
+        $dt = Date("Ym");
+        $dir = UPLOAD_DIR . "/$dt";
+
+        logging::d("Debug", "save upload files to $dir.");
+
+        $args = array(
+            "filename" => $filename,
+            "title" => $title,
+            "comments" => $comments,
+            "dt" => $dt,
+        );
+
+        $ret = Upload::uploadFileViaFileReader($dir, null, function($filename, $args) {
+            $dt = $args["dt"];
+            $path = "$dt/$filename";
+
+            $file = new Files();
+            $file->setFilename($args["filename"]);
+            $file->setPath($path);
+            $file->setTitle($args["title"]);
+            $file->setComments($args["comments"]);
+            $file->save();
+        }, $args);
     }
 
     public function edituser_action() {
