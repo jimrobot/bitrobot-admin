@@ -100,7 +100,7 @@ class Files {
         $arr = array();
         foreach ($files as $fid => $file) {
             if (!$include_deleted) {
-                if ($file["status"] == db_user::STATUS_DELETED) {
+                if ($file["status"] == db_files::STATUS_DELETED) {
                     continue;
                 }
             }
@@ -130,7 +130,7 @@ class Files {
     // }
 
     public static function remove($uid) {
-        return db_user::inst()->remove($uid);
+        return db_files::inst()->remove($uid);
     }
 };
 

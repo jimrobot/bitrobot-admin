@@ -29,21 +29,19 @@ $(document).ready(function() {
             //         document.location.reload();
             //     });
             // },
-            // removeUser: function(event) {
-            //     // var uk = $(event.currentTarget).attr("uk");
-            //     // var uid = this.users[uk].id;
-            //     var uid = this.edituid;
-            //     console.debug(uid);
-            //     if (uid == 0) {
-            //         return;
-            //     }
-            //     __request("api.v1.user.removeuser", {uid: uid}, function(res) {
-            //         if (res.data.code == 0) {
-            //             reload_data();
-            //         }
-            //     });
-            //     $("#newUserModal").modal('hide');
-            // },
+            removeFile: function(event) {
+                var fid = this.editfid;
+                console.debug(fid);
+                if (fid == 0) {
+                    return;
+                }
+                __request("api.v1.files.remove", {fid: fid}, function(res) {
+                    if (res.data.code == 0) {
+                        reload_data();
+                    }
+                });
+                $("#newFileModal").modal('hide');
+            },
             editFile: function(event) {
                 var fk = $(event.currentTarget).attr("fk");
                 console.debug(fk);
@@ -74,37 +72,35 @@ $(document).ready(function() {
             return;
         }
 
-        var file = $("#newFileUpload").get(0).files[0];
-        if (typeof(file) == "undefined") {
-            alert("选择要上传的文件!");
-            return;
-        }
-
         if (filelist.editfid == 0) {
+            var file = $("#newFileUpload").get(0).files[0];
+            if (typeof(file) == "undefined") {
+                alert("选择要上传的文件!");
+                return;
+            }
+
             __file_upload("api.v1.files.upload", $("#newFileUpload").get(0), {filename: filename, title: title, comments: comments}, function(res) {
                 console.debug(res);
                 alert("上传成功！");
                 reload_data();
             });
         } else {
-            // __request("api.v1.user.edituser", {
-            //     uid: filelist.edituid,
-            //     username: username,
-            //     password: password,
-            //     nickname: filelist.modal.nickname,
-            //     telephone: filelist.modal.telephone,
-            //     email: filelist.modal.email,
-            //     comments: filelist.modal.comments
-            // }, function(res) {
-            //     console.debug(res.data);
-            //     for (var k in filelist.users) {
-            //         if (filelist.users[k].id == res.data.id) {
-            //             for (var k1 in res.data) {
-            //                 filelist.users[k][k1] = res.data[k1];
-            //             }
-            //         }
-            //     }
-            // });
+            __request("api.v1.files.edit", {
+                fid: filelist.editfid,
+                filename: filename,
+                title: title,
+                comments: comments
+            }, function(res) {
+                reload_data();
+                // console.debug(res.data);
+                // for (var k in filelist.users) {
+                //     if (filelist.users[k].id == res.data.id) {
+                //         for (var k1 in res.data) {
+                //             filelist.users[k][k1] = res.data[k1];
+                //         }
+                //     }
+                // }
+            });
         }
         $("#newFileModal").modal("hide");
     });

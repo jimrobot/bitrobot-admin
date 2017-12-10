@@ -3,7 +3,7 @@ include_once(dirname(__FILE__) . "/../config.php");
 
 class admin_controller {
     public function preaction($action) {
-        // login::assert();
+        login::assert();
     }
 
     public function index_action() {
