@@ -38,7 +38,7 @@ class login {
         if ($uid == null) {
             return null;
         }
-        $this->mUser = User::create($uid);
+        $this->mUser = Admin::create($uid);
         return $this->mUser;
     }
 
@@ -85,7 +85,7 @@ class login {
         }
 
         if (DEBUG) {
-            $user = User::create($uid);
+            $user = Admin::create($uid);
             return $user->hasPerm($pkey);
         }
 
@@ -99,7 +99,7 @@ class login {
     }
 
     public function do_login($username, $cipher) {
-        $user = User::oneByName($username);
+        $user = Admin::oneByName($username);
         if ($user == null) {
             logging::d("Login", "invalid username: [$username].");
             return array("ret" => "fail", "reason" => "invalid username: [$username].");
@@ -115,15 +115,15 @@ class login {
         $c1 = md5($username. $this->salt(). $password);
         if ($c1 == $cipher) {
             $this->mUser = $user;
-            $perms = array();
-            foreach ($user->groups() as $group) {
-                $perms = array_merge($perms, $group->permsarr());
-            }
+            // $perms = array();
+            // foreach ($user->groups() as $group) {
+            //     $perms = array_merge($perms, $group->permsarr());
+            // }
 
             $_SESSION["user.id"] = $user->id();
             $_SESSION["user.name"] = $user->username();
             $_SESSION["user.nick"] = $user->nickname();
-            $_SESSION["user.permissions"] = $perms;
+            // $_SESSION["user.permissions"] = $perms;
 
             // jump to homepage after login.
             $refer = $this->mRefer;
