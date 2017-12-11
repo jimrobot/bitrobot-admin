@@ -125,10 +125,10 @@ class login {
             // $_SESSION["user.permissions"] = $perms;
 
             // jump to homepage after login.
-            $refer = $this->mRefer;
-            if ($refer == null) {
+            // $refer = $this->mRefer;
+            // if ($refer == null) {
                 $refer = HOME_URL;
-            }
+            // }
             logging::i("Login", "login success, jump to $refer");
             return array("ret" => "success", "refer" => $refer);
         }
